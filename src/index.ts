@@ -1,0 +1,5 @@
+export { ExpoSqliteDialect } from './expo-sqlite-dialect'
+export type { ExpoSqliteDialectConfig } from './expo-sqlite-dialect'
+export { ExpoSqliteDriver } from './expo-sqlite-driver'
+export type { EventSubscription } from 'expo-modules-core'
+export type { DatabaseChangeEvent } from 'expo-sqlite'

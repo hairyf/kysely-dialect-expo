@@ -1,0 +1,79 @@
+{
+  "name": "kysely-dialect-expo",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.25.0",
+  "description": "A Kysely dialect for Expo SQLite, allowing you to use the powerful Kysely query builder with SQLite databases in React Native/Expo applications.",
+  "author": "hairyf <wwu710632@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/hairyf/kysely-dialect-expo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hairyf/kysely-dialect-expo.git"
+  },
+  "bugs": "https://github.com/hairyf/kysely-dialect-expo/issues",
+  "keywords": [
+    "kysely",
+    "expo",
+    "sqlite",
+    "react-native",
+    "dialect",
+    "database",
+    "sql",
+    "query-builder"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint",
+    "prepublishOnly": "nr build",
+    "release": "bumpp",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc",
+    "prepare": "simple-git-hooks"
+  },
+  "peerDependencies": {
+    "expo-modules-core": "*",
+    "expo-sqlite": ">=13.0.0",
+    "kysely": ">=0.28.0",
+    "react-native-web": ">=0.19.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@antfu/ni": "catalog:cli",
+    "@antfu/utils": "catalog:inlined",
+    "@types/node": "catalog:types",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:cli",
+    "kysely": "catalog:kysely",
+    "lint-staged": "catalog:cli",
+    "publint": "catalog:cli",
+    "simple-git-hooks": "catalog:cli",
+    "tinyexec": "catalog:testing",
+    "tsdown": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "vite": "catalog:cli",
+    "vitest": "catalog:testing",
+    "vitest-package-exports": "catalog:testing",
+    "yaml": "catalog:testing"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
