@@ -1,7 +1,7 @@
 {
   "name": "kysely-dialect-expo",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@10.25.0",
   "description": "A Kysely dialect for Expo SQLite, allowing you to use the powerful Kysely query builder with SQLite databases in React Native/Expo applications.",
   "author": "hairyf <wwu710632@gmail.com>",
